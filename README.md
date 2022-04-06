@@ -5,6 +5,7 @@ It will pick up a name in the text file "namelist.txt" and show the image file w
 
 The picture or name will be displayed in a 256x256 window, which means the picture will be scaled and cropped to fill it.
 
+` Attention: images with alpha channel cannot be well display.`
 ## How to use
 - Edit "namelist.txt", and make the names you want in.
 - Add image files (*.bmp, *.jpg, *.jpeg and *.png are supported) named correctly to folder "p\\".
