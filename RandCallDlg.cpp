@@ -94,6 +94,9 @@ BOOL CRandCallDlg::OnInitDialog()
 		if (!strAboutMenu.IsEmpty())
 		{
 			pSysMenu->AppendMenu(MF_SEPARATOR);
+			pSysMenu->AppendMenu(MF_STRING, IDM_OPEN, L"打开图像文件位置");
+			pSysMenu->AppendMenu(MF_STRING, IDM_GIT, L"作者的 GitHub 主页");
+			pSysMenu->AppendMenu(MF_SEPARATOR);
 			pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
 		}
 	}
@@ -153,6 +156,14 @@ void CRandCallDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	{
 		CAboutDlg dlgAbout;
 		dlgAbout.DoModal();
+	}
+	else if (nID == IDM_OPEN)
+	{
+		ShellExecute(NULL, L"explore", L"p", NULL, NULL, SW_SHOW);
+	}
+	else if (nID == IDM_GIT)
+	{
+		ShellExecute(NULL, L"open", L"https://github.com/Little-Down", NULL, NULL, SW_SHOW);
 	}
 	else
 	{
@@ -271,7 +282,7 @@ void CRandCallDlg::ChangePic()
 	{
 		nSgY = nPixY > 96 && nPixY < 160 ? 1 : 4;
 		if (nPixY + nSgY > 256) nSgY = 256 - nPixY;
-		pDC->BitBlt(16, 16 + nPixY, 256, nSgY, &DCMem, 0, nPixY, SRCCOPY); // 画图
+		pDC->BitBlt(22, 23 + nPixY, 256, nSgY, &DCMem, 0, nPixY, SRCCOPY); // 画图
 		nPixY += nSgY;
 		Sleep(5);
 	}

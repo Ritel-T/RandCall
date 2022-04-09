@@ -11,6 +11,8 @@
 #define IDB_BITMAP2                     134
 #define IDC_PIC                         1000
 #define IDC_BUTTONPIC                   1001
+#define IDM_OPEN                        1002
+#define IDM_GIT                         1003
 
 // Next default values for new objects
 // 
