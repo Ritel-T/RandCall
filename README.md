@@ -1,5 +1,5 @@
 # RandCall v4.0
-A little project for calling students (picking pictures) randomly.
+A little project for calling students (showing texts or pictures) randomly.
 
 It will pick up a name in the text file "namelist.txt" and show the image file with the same name if it exists. Else, the name will be shown.
 
